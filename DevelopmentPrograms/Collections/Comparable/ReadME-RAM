@@ -1,0 +1,32 @@
+In Java, the Comparable interface is used to define the natural 
+ordering of objects of a class. This interface is part of the 
+java.lang package and has a single method, compareTo(),
+ which is used to compare the current object with another 
+ object of the same type. Implementing the Comparable interface 
+ allows objects to be sorted automatically, for example, when using 
+ collections like TreeSet, TreeMap, 
+or when sorting a list using Collections.sort().
+
+
+
+Implementing Comparable<Student>: The Student class implements the 
+Comparable interface with a generic type Student, which means the
+ compareTo method will compare the current Student object with another
+  Student object.
+
+compareTo Method: In this implementation, compareTo compares Student
+ objects based on their age using the Integer.compare() method, which 
+ 	returns the result of comparing two integers.
+Student Class with Comparable Implementation:
+
+The Student class implements the Comparable<Student> interface.
+The compareTo method is overridden to define the natural ordering, which is based on the age attribute. The Integer.compare(this.age, other.age) method is used for comparison, which returns a negative integer, zero, or a positive integer as this Student is less than, equal to, or greater than the specified Student.
+Sorting Using Collections.sort():
+
+The students list contains Student objects.
+Collections.sort(students) sorts the list in natural order defined by the compareTo method.
+Since Student implements Comparable, the compareTo method is used to compare Student objects during sorting.
+Output Display:
+
+The program first prints the original list of students.
+After sorting, it prints the sorted list based on the natural order defined by the age attribute.
